@@ -119,7 +119,7 @@ $split-values: str-split($values, "|");
       width: 20px;
       border-top: none;
       background: none;
-      background-color: header_background;
+      background-color: var(--header_background);
       img.avatar {
         height: 20px;
         width: 20px;
@@ -141,7 +141,7 @@ $split-values: str-split($values, "|");
     .topic-body {
       padding-top: 8px;
       border-top: none;
-      background-color: header_background;
+      background-color: var(--header_background);
 
       &.highlighted {
         animation: none;
@@ -172,11 +172,11 @@ $split-values: str-split($values, "|");
         }
       }
       .contents {
-        border-top: 1px solid var(--primary-low);
+        border: 2px double var(--primary-low);
         margin-left: -25px;
         padding: 15px;
       }
-      
+
       .post-links-container{
         visibility: hidden;
       }
