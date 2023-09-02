@@ -1,0 +1,22 @@
+adventure_category:
+  type: string
+  default: ""
+  description: 
+    en: 'Enter the category slug of your forum adventure category as it appears in the url. 
+         The slug is bold in the following example url: 
+         https://community.example.org/c/<b>forum-adventures</b>/3
+         <br><br>
+         Note: you may use more than one category slug by comma separating the
+         slug values like: <b>adventure-one,adventure-two</b> <br>
+         Be sure there are no spaces after the commas.'
+adventure_tag:
+  type: list
+  list_type: tag
+  default: ""
+  description:
+    en: 'Topics will have adventure styling applied when they have any of the tags included in this setting.'
+mobile_enabled:
+  type: bool
+  default: false
+  description:
+    en: 'BETA VERSION - please provide feedback in the theme component topic.'
