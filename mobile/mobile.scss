@@ -85,13 +85,16 @@
     }
   }
 
+/// Keep all style changes within these values
+/// Any changes outside of these will affect the entire forum!
   %adventure-tag,
   %adventure-category {
     #topic-title {
       margin-top: 1em;
     }
 
-    #post_1 {
+    ///Formatting for post by original poster
+    .topic-owner {
       .topic-avatar {
         height: 25px;
         width: 25px;

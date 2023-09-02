@@ -67,6 +67,7 @@
   @return $result;
 }
 
+///Setup adventure_category and adventure_tag checks to only apply style to the appropriate tag
 $values: $adventure_category;
 $split-values: str-split($values, ",");
 @each $value in $split-values {
@@ -83,6 +84,8 @@ $split-values: str-split($values, "|");
   }
 }
 
+/// Keep all style changes within these values
+/// Any changes outside of these will affect the entire forum!
 %adventure-tag,
 %adventure-category {
   .topic-timeline {
@@ -109,7 +112,8 @@ $split-values: str-split($values, "|");
     }
   }
 
-  #post_1 {
+  ///Formatting for post by original poster
+  .topic-owner {
     .topic-avatar {
       height: 20px;
       width: 20px;
@@ -200,6 +204,8 @@ $split-values: str-split($values, "|");
       }
     }
   }
+
+
 
   @media all and (max-width: 775px) {
     #topic-title {
