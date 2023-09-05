@@ -3,17 +3,15 @@
     api.attachWidgetAction('post','nextUpdatePost',() => {
       var nextUpdatePostUrl = this.getURL();
       console.log(nextUpdatePostUrl);
-
     });
     api.addPostMenuButton("next-update", () => {
       return{
-        action: 'nextUpdatePost'
-        icon: 'caret-right'
-        className: 'next-update'
-        title: 'next.update'
+        action: 'nextUpdatePost',
+        icon: 'caret-right',
+        className: 'next-update',
+        title: 'next.update',
         position: 'last'
       };
     });
-    
   </script>
 {{/if}}
