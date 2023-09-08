@@ -1,0 +1,10 @@
+<script>
+var typeTime = document.getElementById("typingDuration");
+var currentTime = typeTime.innerHTML;
+
+var displayTypingTime = document.createElement("div","id=timerCounter", "class=timerCounter");
+displayTypingTime.innerHTML = currentTime;
+
+var displayTimeParent = document.getElementsByClassName("title-wrapper")[0];
+displayTimeParent.appendChild(displayTypingTime);
+</script>
