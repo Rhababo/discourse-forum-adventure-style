@@ -12,4 +12,8 @@ export default class AdventureComposerLogic extends Component {
       return user.name;
     }
   }
+
+  get currentText() {
+    return this.args.outletArgs.model.reply;
+    }
 }
