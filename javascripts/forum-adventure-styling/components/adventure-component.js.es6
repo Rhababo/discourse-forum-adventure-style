@@ -5,7 +5,6 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 export default Component.extend({
   isAdventureTopic: false,
-  
   @discourseComputed("topic.category_id", "topic.tags")
   isAdventureTopic(categoryId, topicTags) {
     let hasCategory = false;
@@ -22,7 +21,7 @@ export default Component.extend({
       const allowedTags = settings.adventure_tag.split("|");
       hasTag = allowedTags.some((tag) => topicTags.includes(tag));
     }
-
+    console.log("Script is running");
     return hasCategory || hasTag;
   },
 
