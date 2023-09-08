@@ -16,6 +16,6 @@ export default class AdventureComposerLogic extends Component {
   get currentText() {
     var postcontent = this.args.outletArgs.model.reply;
     console.log("Script is running");
-    return toString(postcontent);
+    return postcontent;
     }
 }
