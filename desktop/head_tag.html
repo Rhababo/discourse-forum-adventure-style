@@ -10,9 +10,10 @@
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', () =>{
-        console.log(this);
-        var attributes = attrs;
-        var postId = attrs.id;
+        const post = this.model;
+        console.log(this.model);
+        var attributes = post.attrs;
+        var postId = post.attrs.id;
         console.log(attributes);
         console.log(postId);
         console.log("Next update button clicked");
