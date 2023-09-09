@@ -1,10 +1,26 @@
-<script>
-var typeTime = document.getElementById("typingDuration");
-var currentTime = typeTime.innerHTML;
+//Add next update button to post menu
+<script type="text/discourse-plugin" version="1.0">
+    api.addPostMenuButton("next-update", () => {
+      return{
+        action: 'nextUpdatePost',
+        icon: 'angle-double-right',
+        className: 'next-update',
+        title: 'next.update',
+        position: 'first'
+      };
+    });
+    api.attachWidgetAction('post-menu', 'nextUpdatePost', () =>{
+        console.log("Next update button clicked");
+    });
+ </script>
+
+ <script>
+/*var typeTime = document.getElementById("typingDuration");
+var current/*Time = typeTime.innerHTML;
 
 var displayTypingTime = document.createElement("div","id=timerCounter", "class=timerCounter");
 displayTypingTime.innerHTML = currentTime;
 
 var displayTimeParent = document.getElementsByClassName("title-wrapper")[0];
-displayTimeParent.appendChild(displayTypingTime);
+displayTimeParent.appendChild(displayTypingTime);*/
 </script>
