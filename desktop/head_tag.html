@@ -11,7 +11,10 @@
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', () =>{
         console.log(this);
-        console.log(this.findAncestorModel());
+        var attributes = attrs;
+        var post-id = attrs.id;
+        console.log(attributes);
+        console.log(post-id);
         console.log("Next update button clicked");
     });
  </script>
