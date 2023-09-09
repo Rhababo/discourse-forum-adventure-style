@@ -10,6 +10,8 @@
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', () =>{
+        console.log(this);
+        console.log(this.findAncestorModel());
         console.log("Next update button clicked");
     });
  </script>
