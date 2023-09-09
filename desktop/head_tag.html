@@ -9,7 +9,7 @@
         position: 'first'
       };
     });
-    api.attachWidgetAction('post-menu', 'nextUpdatePost', () {
+    api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
         console.log(this);
         const attrs = this.attrs;
         console.log(attrs);
