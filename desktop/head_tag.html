@@ -1,6 +1,6 @@
 //Add next update button to post menu
 <script type="text/discourse-plugin" version="1.0">
-    api.addPostMenuButton("next-update", (attrs) => {
+    api.addPostMenuButton("next-update", (attrs,post) => {
       return{
         action: 'nextUpdatePost',
         icon: 'angle-double-right',
@@ -9,8 +9,10 @@
         position: 'first'
       };
     });
-    api.attachWidgetAction('post-menu', 'nextUpdatePost', (attrs) =>{
+    api.attachWidgetAction('post-menu', 'nextUpdatePost', () =>{
+        const {attrs, state} = this;
         console.log(attrs);
+        console.log(state);
         console.log("Next update button clicked");
     });
  </script>
