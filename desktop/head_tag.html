@@ -3,8 +3,10 @@
     api.addPostMenuButton("next-update", (attrs) => {
       var displayvalue = "block";
         if(!attrs.topicOwner){
-        displayvalue = "none";
-    }
+            displayvalue = "none";
+        }
+        console.log(displayvalue);
+        console.log(attrs);
         return{
         action: 'nextUpdatePost',
         icon: 'angle-double-right',
