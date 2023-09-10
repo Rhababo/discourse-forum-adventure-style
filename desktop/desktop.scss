@@ -91,6 +91,10 @@ $split-values: str-split($values, "|");
   .topic-timeline {
     display: none;
   }
+  
+  .not-By-Topic-Owner{
+    display: none;
+  }
 
   #topic-title {
     display: flex;
