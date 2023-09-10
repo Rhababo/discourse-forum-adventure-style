@@ -9,6 +9,7 @@
         title: 'next.update',
         position: 'first',
         disabled: !attrs.topicOwner
+        hidden: !attrs.topicOwner
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
