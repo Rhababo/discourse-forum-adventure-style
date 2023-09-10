@@ -1,19 +1,14 @@
 //Add next update button to post menu
 <script type="text/discourse-plugin" version="1.0">
     api.addPostMenuButton("next-update", (attrs) => {
-      var displayvalue = "block";
-        if(!attrs.topicOwner){
-            displayvalue = "none";
-        }
-        console.log(displayvalue);
-        console.log(attrs);
+        console.log(attrs.topicOwner);
         return{
         action: 'nextUpdatePost',
         icon: 'angle-double-right',
         className: 'next-update',
         title: 'next.update',
         position: 'first',
-        display: displayvalue
+        disabled: !attrs.topicOwner
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
