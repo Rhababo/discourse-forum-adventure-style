@@ -2,14 +2,21 @@
 <script type="text/discourse-plugin" version="1.0">
     api.addPostMenuButton("next-update", (attrs) => {
         console.log(attrs.topicOwner);
+        var topicOwner = "next-update by-Topic-Owner";
+        var styleCode = "display : block;"
+        if(attrs.topicOwner == false){
+            topicOwner = "next-update not-By-Topic-Owner";
+            styleCode = "display : none;"
+        }
         return{
         action: 'nextUpdatePost',
         icon: 'angle-double-right',
-        className: 'next-update',
+        className: topicOwner,
         title: 'next.update',
         position: 'first',
         disabled: !attrs.topicOwner,
-        hidden: !attrs.topicOwner
+        style: styleCode
+
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
