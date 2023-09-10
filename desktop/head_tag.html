@@ -7,6 +7,9 @@
         className: 'next-update',
         title: 'next.update',
         position: 'first'
+        if(!attrs.topicOwner){
+            display: none;
+        }
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
