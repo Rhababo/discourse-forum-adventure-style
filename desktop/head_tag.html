@@ -1,7 +1,7 @@
 //Add next update button to post menu
 <script type="text/discourse-plugin" version="1.0">
     api.addPostMenuButton("next-update", (attrs) => {
-      const displayvalue = "block";
+      var displayvalue = "block";
         if(!attrs.topicOwner){
         displayvalue = "none";
     }
