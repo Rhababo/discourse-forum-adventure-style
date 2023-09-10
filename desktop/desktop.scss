@@ -84,7 +84,7 @@ $split-values: str-split($values, "|");
   }
 }
 
-.not-By-Topic-Owner{
+.not-By-Topic-Owner *{
   display: none;
 }
 
