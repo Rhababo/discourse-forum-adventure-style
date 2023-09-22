@@ -17,17 +17,7 @@
         console.log(this);
         const attrs = this.attrs;
         const topic = this.parentWidget.parentWidget.parentWidget.parentWidget.model.topic;
-        console.log(topic.postStream);
-        if(topic.postStream.userFilters.length == 0){
-            console.log("No user filters");
-            topic.postStream.userFilters.push(attrs.user.username);
-        }
-        else{
-            topic.postStream.userFilters = [];
-        }
         console.log(attrs.user.username);
-        console.log(this.parentWidget.attrs.topicUrl);
-        console.log(this.parentWidget.parentWidget.parentWidget);
         console.log(this.parentWidget.parentWidget.parentWidget.parentWidget.model.topic);
         console.log("Next update button clicked");
     });
