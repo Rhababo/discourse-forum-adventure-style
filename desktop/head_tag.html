@@ -16,7 +16,14 @@
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
         console.log(this);
         const attrs = this.attrs;
-        console.log(attrs);
+        const topic = this.parentWidget.parentWidget.parentWidget.parentWidget.model.topic;
+        console.log(topic);
+        if(topic.fancyTitle == "Test some new features"){
+            topic.fancyTitle = "Test a button!";
+        }
+        else{
+            topic.fancyTitle = "Test some new features";
+        }
         console.log(attrs.user.username);
         console.log(this.parentWidget.attrs.topicUrl);
         console.log(this.parentWidget.parentWidget.parentWidget);
