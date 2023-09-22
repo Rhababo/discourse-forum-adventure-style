@@ -84,10 +84,6 @@ $split-values: str-split($values, "|");
   }
 }
 
-.not-By-Topic-Owner *{
-  display: none;
-}
-
 /// Keep all style changes within these values
 /// Any changes outside of these will affect the entire forum!
 %adventure-tag,

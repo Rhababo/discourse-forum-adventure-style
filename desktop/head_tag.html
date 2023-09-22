@@ -1,12 +1,7 @@
-//Add next update button to post menu
 <script type="text/discourse-plugin" version="1.0">
     api.addPostMenuButton("next-update", (attrs) => {
-        console.log(attrs.topicOwner);
         var topicOwner = "next-update by-Topic-Owner";
-        var styleCode = "display : block;"
         if(attrs.topicOwner == false){
-            topicOwner = "next-update not-By-Topic-Owner";
-            styleCode = "display : none;"
             return;
         }
         return{
@@ -16,14 +11,15 @@
         title: 'next.update',
         position: 'first',
         disabled: !attrs.topicOwner,
-        style: styleCode
-
       };
     });
     api.attachWidgetAction('post-menu', 'nextUpdatePost', function() {
         console.log(this);
         const attrs = this.attrs;
         console.log(attrs);
+        console.log(attrs.user.username);
+        console.log(this.parentWidget.attrs.topicUrl);
+        console.log(this.parentWidget.parentWidget.parentWidget);
         console.log("Next update button clicked");
     });
  </script>
