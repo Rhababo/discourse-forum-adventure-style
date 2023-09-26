@@ -1,6 +1,7 @@
-              <DButton
-                @action={{fn (action "filterPosts") this.user}}
+{{log @outletArgs}}
+            <DButton
+                @action={{fn (action "filterPosts")}}
                 @icon="filter"
                 @translatedLabel={{this.filterPostsLabel}}
                 class="btn-default"
-              />
+            />
