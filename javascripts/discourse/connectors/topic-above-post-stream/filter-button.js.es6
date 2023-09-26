@@ -10,6 +10,7 @@ export default class filterTopicOwnerPosts extends Component {
     @action
     filterPosts(user) {
         const topicController = this.topic;
+        console.log(topicController);
         topicController.send("filterParticipant", user);
     }
 
