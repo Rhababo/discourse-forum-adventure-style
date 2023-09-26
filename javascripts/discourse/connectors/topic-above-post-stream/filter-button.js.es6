@@ -11,15 +11,12 @@ export default class filterTopicOwnerPosts extends Component {
     @controller topic;
     @service site;
     @action
-    filterPosts(user) {
+    filterPosts() {
         const topicController = this.topic;
-        console.log(topicController);
-        console.log(user);
-        console.log(this.site);
         console.log(this.topic);
         const postStream = topicController.get("model.postStream");
         console.log(postStream);
-        topicController.send("filterParticipant", user);
+        topicController.send("filterParticipant", "model.details.created_by.username");
     }
 
     @discourseComputed("username", "topicPostCount")
