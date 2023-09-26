@@ -1,12 +1,13 @@
 import Component from "@glimmer/component";
 //import { inject as service } from "@ember/service";
-//import { inject as controller } from "@ember/controller";
+import { inject as controller } from "@ember/controller";
 import { action } from "@ember/object";
 import I18n from "I18n";
 import discourseComputed from "discourse-common/utils/decorators";
 //import DiscourseURL, { groupPath, userPath } from "discourse/lib/url";
 
 export default class filterTopicOwnerPosts extends Component {
+    @controller topic
     @action
     filterPosts(user) {
         const topicController = this.topic;
