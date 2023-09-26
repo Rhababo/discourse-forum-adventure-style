@@ -30,7 +30,7 @@ export default class filterTopicOwnerPosts extends Component {
         }).then(() => {
             console.log("UpdatingQueryParams");
             console.log(topicController);
-            topicController.updateQueryParams();
+            topicController.send("updateQueryParams");
             console.log("Params are updated!");
         });
         console.log(topicController.model);
