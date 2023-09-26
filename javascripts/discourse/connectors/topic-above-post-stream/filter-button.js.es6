@@ -17,13 +17,13 @@ export default class filterTopicOwnerPosts extends Component {
         const topicController = this.topic;
         const postStream = topicController.model.postStream;
         const topicOwnerUser = topicController.model.details.created_by;
-        topicController.send("filterParticipant", topicController.model.details.created_by).then(() => {
-            if (postStream.posts) {
-                console.log("postStream has posts");
-                console.log(postStream.posts[0].get("post_number"));
-                DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
-            }
-        });
+        topicController.send("filterParticipant", topicController.model.details.created_by);
+
+        if (postStream.posts) {
+            console.log("postStream has posts");
+            console.log(postStream.posts[0].get("post_number"));
+            DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
+        }
     }
 
 
