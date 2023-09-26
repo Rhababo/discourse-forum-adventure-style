@@ -11,11 +11,12 @@ export default class filterTopicOwnerPosts extends Component {
     @controller topic;
     @service site;
 
-    const topicOwner = this.topic.model.details.created_by.username;
+    topicOwner = this.topic.model.details.created_by.username;
     @action
     filterPosts() {
         const topicController = this.topic;
         topicController.send("filterParticipant", topicController.model.details.created_by);
     }
+
 
 }
