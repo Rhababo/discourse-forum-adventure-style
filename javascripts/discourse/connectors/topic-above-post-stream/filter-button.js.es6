@@ -4,6 +4,7 @@ import { inject as controller } from "@ember/controller";
 import { action } from "@ember/object";
 import I18n from "I18n";
 import discourseComputed from "discourse-common/utils/decorators";
+//import User from "discourse/models/user";
 //import DiscourseURL, { groupPath, userPath } from "discourse/lib/url";
 
 export default class filterTopicOwnerPosts extends Component {
@@ -15,6 +16,8 @@ export default class filterTopicOwnerPosts extends Component {
         console.log(topicController);
         console.log(user);
         console.log(this.site);
+        const postStream = topicController.get("model.PostStream");
+        console.log(postStream);
         topicController.send("filterParticipant", user);
     }
 
