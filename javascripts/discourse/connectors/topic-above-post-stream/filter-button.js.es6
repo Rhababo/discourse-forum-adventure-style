@@ -20,7 +20,7 @@ export default class filterTopicOwnerPosts extends Component {
         //topicController.send("filterParticipant", topicOwnerUser);
         postStream.cancelFilter();
         postStream.userFilters.addObject(topicOwnerUser);
-        refreshPostStream().then(()=> topicController.updateQueryParams());
+        this.refreshPostStream().then(()=> topicController.updateQueryParams());
     }
 
     refreshPostStream(){
