@@ -2,10 +2,10 @@ import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 import { inject as controller } from "@ember/controller";
 import { action } from "@ember/object";
+import DiscourseURL from "discourse/lib/url";
 //import I18n from "I18n";
 //import discourseComputed from "discourse-common/utils/decorators";
 //import User from "discourse/models/user";
-//import DiscourseURL, { groupPath, userPath } from "discourse/lib/url";
 
 export default class filterTopicOwnerPosts extends Component {
     @controller topic;
@@ -15,7 +15,12 @@ export default class filterTopicOwnerPosts extends Component {
     @action
     filterPosts() {
         const topicController = this.topic;
+        const postStream = topicController.model.postStream;
         topicController.send("filterParticipant", topicController.model.details.created_by);
+        console.log(topicController.model);
+        if (postStream.posts) {
+            DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
+        }
     }
 
 
