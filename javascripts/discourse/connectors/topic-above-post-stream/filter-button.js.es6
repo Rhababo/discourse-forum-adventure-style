@@ -18,7 +18,7 @@ export default class filterTopicOwnerPosts extends Component {
         const postStream = topicController.model.postStream;
         const topicOwnerUser = topicController.model.details.created_by;
         try {
-            await topicController.send("filterParticipant", topicController.model.details.created_by);
+            topicController.send("filterParticipant", topicController.model.details.created_by);
 
 
             if (postStream.posts) {
