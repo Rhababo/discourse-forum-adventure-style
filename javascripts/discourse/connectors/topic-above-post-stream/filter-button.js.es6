@@ -26,7 +26,7 @@ export default class filterTopicOwnerPosts extends Component {
                 console.log(postStream.posts[0].get("post_number"));
                 DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
             }
-        }).then(()=>topicController.model.updateQueryParams);
+        }).then(()=>topicController.updateQueryParams);
         console.log(topicController.model);
         console.log(postStream);
         console.log(DiscourseURL);
