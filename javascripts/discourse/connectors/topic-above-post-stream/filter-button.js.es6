@@ -29,7 +29,9 @@ export default class filterTopicOwnerPosts extends Component {
             console.log("We jumped!");
         }).then(() => {
             console.log("UpdatingQueryParams");
+            console.log(topicController);
             topicController.updateQueryParams();
+            console.log("Params are updated!");
         });
         console.log(topicController.model);
         console.log(postStream);
