@@ -17,18 +17,9 @@ export default class filterTopicOwnerPosts extends Component {
         const topicController = this.topic;
         const postStream = topicController.model.postStream;
         const topicOwnerUser = topicController.model.details.created_by;
-        try {
-            topicController.send("filterParticipant", topicController.model.details.created_by);
-
-
-            if (postStream.posts) {
-                console.log("postStream has posts");
-                console.log(postStream.posts[0].get("post_number"));
-                DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
-            }
-        }
-        catch (error){
-            console.log("Error occured.");
+        topicController.send("filterParticipant", topicOwnerUser);
+        if (postStream.posts) {
+            DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
         }
     }
 
