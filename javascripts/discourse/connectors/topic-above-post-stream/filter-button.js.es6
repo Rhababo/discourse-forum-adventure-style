@@ -15,7 +15,7 @@ export default class filterTopicOwnerPosts extends Component {
         const topicController = this.topic;
         topicController.send("filterParticipant", topicController.model.details.created_by);
     }
-    @action
+
     getTopicOwner(){
         return this.topic.model.details.created_by.username;
     }
