@@ -17,21 +17,9 @@ export default class filterTopicOwnerPosts extends Component {
         const topicController = this.topic;
         const postStream = topicController.model.postStream;
         const topicOwnerUser = topicController.model.details.created_by;
-        //topicController.send("filterParticipant", topicOwnerUser);
-        postStream.cancelFilter();
-        postStream.userFilters.addObject(topicOwnerUser);
-        this.refreshPostStream().then(()=> topicController.updateQueryParams());
+        topicController.send("filterParticipant", topicOwnerUser);
     }
 
-    refreshPostStream(){
-        const postStream = this.topic.model.postStream;
-        return postStream.refresh().then(() => {
-            if (postStream.posts) {
-                DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
-            }
-        });
-
-    }
 
 
 
