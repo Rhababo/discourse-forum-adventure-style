@@ -30,7 +30,6 @@ export default class filterTopicOwnerPosts extends Component {
         console.log(topicController.model);
         console.log(postStream);
         console.log(DiscourseURL);
-        */
     }
 
 
