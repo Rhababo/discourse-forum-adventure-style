@@ -25,6 +25,7 @@ export default class filterTopicOwnerPosts extends Component {
 
     refreshPostStream(){
         const postStream = this.topic.model.postStream;
+
         return postStream.refresh().then(() => {
             if (postStream.posts) {
                 DiscourseURL.jumpToPost(postStream.posts[0].get("post_number"));
